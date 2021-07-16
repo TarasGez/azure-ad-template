@@ -3,12 +3,46 @@
 <head>
     <title>PFMM</title>
     <link rel="stylesheet" href="https://unpkg.com/carbon-components@9.90.0/css/carbon-components.min.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 70px auto;
+        }
+        .inner {
+            display: flex;
+            justify-content: flex-start;
+        }
+        label[for="imageClimeType"],
+        #imageClaimType {
+            display: none;
+        } 
+    </style>
 </head>
 <body>
-	<h1>PFMM SIGN UP</h1>
-    <div id="api"></div>
+    <div class="container">
+        <h1>PFMM SIGN UP</h1>
+
+        <div class="inner">
+            <div id="api"></div>
+            <div class="rightCol">
+                <h2>Image:</h2>
+                <img id="imageClaimTypeImage" src="" />
+            </div>
+        </div>
+    </div>
     
-    <script src="node_modules/carbon-components/scripts/carbon-components.min.js"></script>
+    <script>
+        (function(){
+            const imageClaimTypeImage = document.querySelector('#imageClaimTypeImage');
+            const imageClaimTypeTextInput = document.querySelector('#imageClaimType');
+            if(imageClaimTypeTextInput && imageClaimTypeTextInput.val()) {
+                imageClaimTypeImage.setAttribute(
+                    "src",
+                    "data:image/png;base64," + imageClaimTypeTextInput.val()
+                );
+            }
+        })();
+    </script>
   </body>
 </html>
 
