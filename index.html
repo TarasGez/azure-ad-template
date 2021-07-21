@@ -10,12 +10,16 @@
         html, body {
             height: 100%;
             margin: 0;
+            background: #FFF;
         }
         .wrapper {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
             height: 100%;
+        }
+        main {
+            margin-bottom: 50px;
         }
         .header {
             color: #555;
@@ -30,7 +34,6 @@
             transition: all 150ms ease 0s;
             align-items: center;
             border-bottom: 1px solid #ececec;
-            margin-bottom: 20px;
             justify-content: flex-start;
             background-color: #fff;
         }
@@ -130,7 +133,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             width: 100%;
             margin-left: auto;
             box-sizing: border-box;
@@ -142,19 +145,20 @@
             display: flex;
             flex-flow: row wrap;
             width: 100%;
+            margin-top: 48px;
         }
         .sidebar {
+            width: 16.6667%;
+            min-width: 190px;
             box-sizing: border-box;
             margin: 0px;
             flex-direction: row;
-            flex-basis: 16.6667%;
             -webkit-box-flex: 0;
             flex-grow: 0;
-            max-width: 16.6667%;
         }
-        .MuiBox-root {
-            padding-top: 56px;
-            padding-bottom: 56px;
+        .sidebar-root {
+            display: none;
+            padding-top: 5px;
         }
         .MuiGrid-root {
             box-sizing: border-box;
@@ -180,17 +184,150 @@
         .pl-10 {padding-left: 10px;}
         svg.active {color: #163DD9;}
 
-
-
         
         .inner {
             box-sizing: border-box;
             margin: 0px;
             flex-direction: row;
-            flex-basis: 83.3333%;
             -webkit-box-flex: 0;
             flex-grow: 0;
-            max-width: 83.3333%;
+        }
+
+
+        h1 {
+            margin-bottom: 10px;
+            font-family: IBM Plex Sans;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+        h2 {
+            font-family: IBM Plex Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.1599999964237213px;
+            text-align: left;
+            color: #525252;
+        }
+        #api {
+            margin-top: 40px;
+        }
+
+        .attrEntry label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: IBM Plex Sans;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.3199999928474426px;
+            text-align: left;
+        }
+        .attrEntry input {
+            margin-bottom: 24px;
+            font-size: 0.875rem;
+            font-size: var(--cds-body-short-01-font-size, 0.875rem);
+            font-weight: 400;
+            font-weight: var(--cds-body-short-01-font-weight, 400);
+            line-height: 1.125rem;
+            line-height: var(--cds-body-short-01-line-height, 1.125rem);
+            letter-spacing: 0.16px;
+            letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
+            outline: 2px solid transparent;
+            outline-offset: -2px;
+            background-color: #f4f4f4;
+            background-color: var(--cds-field-01, #f4f4f4);
+            width: 288px;
+            height: 2.5rem;
+            padding: 0 1rem;
+            color: #161616;
+            color: var(--cds-text-01, #161616);
+            border: none;
+            border-bottom: 1px solid #8d8d8d;
+            border-bottom: 1px solid var(--cds-ui-04, #8d8d8d);
+            -webkit-transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9), outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+            transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9), outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+        button {
+            font-size: 0.875rem;
+            font-size: var(--cds-body-short-01-font-size, 0.875rem);
+            font-weight: 400;
+            font-weight: var(--cds-body-short-01-font-weight, 400);
+            line-height: 1.125rem;
+            line-height: var(--cds-body-short-01-line-height, 1.125rem);
+            letter-spacing: 0.16px;
+            letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
+            cursor: pointer;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            vertical-align: top;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            min-height: 3rem;
+            padding: calc(0.875rem - 3px) 60px calc(0.875rem - 3px) 12px;
+            border-radius: 0;
+            text-align: left;
+            text-decoration: none;
+            -webkit-transition: all 70ms cubic-bezier(0, 0, 0.38, 0.9);
+            transition: all 70ms cubic-bezier(0, 0, 0.38, 0.9);
+            outline: none;
+            position: relative;
+            max-width: 20rem;
+            margin: 0;
+        }
+        button[type="submit"] {
+            margin-bottom: 0.5rem;
+            vertical-align: top;
+            background-color: #0f62fe;
+            background-color: var(--cds-interactive-01, #0f62fe);
+            border-width: 3px;
+            border-style: solid;
+            border-color: transparent;
+            color: #ffffff;
+            color: var(--cds-text-04, #ffffff);
+        }
+       
+        button[type="submit"]:hover {
+            background-color: #0353e9;
+        }
+        button[type="submit"] {
+            background-color: #0f62fe;
+            background-color: var(--cds-interactive-01, #0f62fe);
+            border-width: 3px;
+            border-style: solid;
+            border-color: transparent;
+            color: #ffffff;
+            color: var(--cds-text-04, #ffffff);
+        }
+        .btn-icon {
+            fill: currentColor;
+            position: absolute;
+            right: 1rem;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .verificationControlContent {
+            margin-bottom: 24px;
+        }
+
+        .intro, .helpLink, #cancel {
+            display: none;
         }
     </style>
 </head>
@@ -212,7 +349,7 @@
                 <div class="grid">
 
                     <div class="sidebar">
-                        <div class="MuiBox-root">
+                        <div class="sidebar-root">
                             <div class="MuiGrid-root">
                                 <div class="MuiGrid-item">
                                     <div class="MuiGrid-item-inner active">
@@ -260,8 +397,37 @@
     
                         <!-- form here -->
                             
-                        <div id="api">                
-                        </div>
+                        <div id="api" data-name="SelfAsserted">
+                            <div class="buttons">
+                            </div>
+                            <div class="intro">
+                              <p>Please provide the following details.</p>
+                            </div>
+                            <form id="attributeVerification" action="JavaScript:void(0);">
+                                <div id="passwordEntryMismatch" class="error pageLevel" style="display: none;" aria-hidden="true">The password entry fields do not match. Please enter the same password in both fields and try again.</div>
+                                <div id="requiredFieldMissing" class="error pageLevel" style="display: none;" aria-hidden="true">A required field is missing. Please fill out all required fields and try again.</div>
+                                <div id="fieldIncorrect" class="error pageLevel" style="display: none;" aria-hidden="true">One or more fields are filled out incorrectly. Please check your entries and try again.</div>
+                                <div id="claimVerificationServerError" class="error pageLevel" style="display: none;" aria-hidden="true"></div>
+                                <div id="attributeList" class="attr">
+                                    <ul>
+                                        <li class="VerificationControl"><div class="attrEntry"><label id="emailVerificationControl_label" for="emailVerificationControl"></label><div class="error itemLevel" role="alert"></div><div class="verificationControlContent" id="emailVerificationControl"><div class="verificationInfoText"><div id="emailVerificationControl_info_message" aria-hidden="true" role="alert" aria-label="Verification is necessary. Please click Send button." style="display: none;">Verification is necessary. Please click Send button.</div></div><div class="verificationSuccessText"><div id="emailVerificationControl_success_message" aria-hidden="true" role="alert" aria-label="" style="display: none;"></div></div><div class="verificationErrorText error"><div id="emailVerificationControl_error_message" aria-hidden="true" role="alert" aria-label="" style="display: none;"></div></div><ul><li class="EmailBox email" aria-hidden="false" style="display: inline;"><div class="attrEntry"><label id="email_label" for="email">Email Address</label><div class="error itemLevel" role="alert"></div><input id="email" class="textInput" type="email" placeholder="Email Address" aria-label="Email Address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" title="Email address that can be used to contact you." aria-required="true" autofocus="autofocus"><a class="helpLink tiny" href="javascript:void(0)" data-help="Email address that can be used to contact you.">What is this?</a></div></li><li class="TextBox VerificationCode" aria-hidden="true" style="display: none;"><div class="attrEntry"><label id="emailVerificationCode_label" for="emailVerificationCode">Verification Code</label><div class="error itemLevel" role="alert"></div><input id="emailVerificationCode" class="textInput" type="text" placeholder="Verification Code" aria-label="Verification Code" title="Enter your verification code" aria-required="true" autocomplete="off" disabled=""><a class="helpLink tiny" href="javascript:void(0)" data-help="Enter your verification code">What is this?</a></div></li></ul><div class="working" style="display: none;" aria-hidden="true"></div><div class="buttons"><button class="sendCode" id="emailVerificationControl_but_send_code" type="button" aria-label="Send verification code" aria-hidden="false" style="display: inline;">Send verification code</button><button class="verifyCode" id="emailVerificationControl_but_verify_code" type="button" aria-label="Verify code" aria-hidden="true" style="display: none;">Verify code</button><button class="sendNewCode" id="emailVerificationControl_but_send_new_code" type="button" aria-label="Send new code" aria-hidden="true" style="display: none;">Send new code</button><button class="changeClaims" id="emailVerificationControl_but_change_claims" type="button" aria-label="Change e-mail Email Address" aria-hidden="true" style="display: none;">Change e-mail</button></div></div><a class="helpLink tiny" href="javascript:void(0)">What is this?</a></div></li>
+                                        <li class="Password"><div class="attrEntry"><label id="newPassword_label" for="newPassword">New Password</label><div class="error itemLevel" role="alert"></div><input id="newPassword" class="textInput" type="password" placeholder="New Password" aria-label="New Password" title="Enter new password" autocomplete="new-password" aria-required="true"><a class="helpLink tiny" href="javascript:void(0)" data-help="Enter new password">What is this?</a></div></li>
+                                        <li class="Password"><div class="attrEntry"><label id="reenterPassword_label" for="reenterPassword">Confirm New Password</label><div class="error itemLevel" role="alert"></div><input id="reenterPassword" class="textInput" type="password" placeholder="Confirm New Password" aria-label="Confirm New Password" title="Confirm new password" autocomplete="new-password" aria-required="true"><a class="helpLink tiny" href="javascript:void(0)" data-help="Confirm new password">What is this?</a></div></li>
+                                        <li class="TextBox"><div class="attrEntry"><label id="givenName_label" for="givenName">Given Name</label><div class="error itemLevel" role="alert"></div><input id="givenName" class="textInput" type="text" placeholder="Given Name" aria-label="Given Name" title="Your given name (also known as first name)." aria-required="true"><a class="helpLink tiny" href="javascript:void(0)" data-help="Your given name (also known as first name).">What is this?</a></div></li>
+                                        <li class="TextBox"><div class="attrEntry"><label id="surname_label" for="surname">Surname</label><div class="error itemLevel" role="alert"></div><input id="surname" class="textInput" type="text" placeholder="Surname" aria-label="Surname" title="Your surname (also known as family name or last name)." aria-required="true"><a class="helpLink tiny" href="javascript:void(0)" data-help="Your surname (also known as family name or last name).">What is this?</a></div></li>
+                                        <li class="TextBox"><div class="attrEntry"><label id="extension_imageClaimType_label" for="extension_imageClaimType">imageClaimType</label><div class="error itemLevel" role="alert"></div><input id="extension_imageClaimType" class="textInput" type="text" placeholder="imageClaimType" aria-label="imageClaimType"><a class="helpLink tiny" href="javascript:void(0)">What is this?</a></div></li>
+                                    </ul>
+                                </div>
+                                <div class="buttons">
+                                    <button id="continue" type="submit" form="attributeVerification" aria-disabled="true" aria-label="Create">Create</button><button id="cancel" aria-label="Cancel" formnovalidate="">Cancel</button>
+                                </div>
+                        
+                                <div class="verifying-modal">
+                                    <div id="verifying_blurb"></div>
+                                </div>
+                            </form>
+                            
+                          </div>
     
     
                         <!-- /form here -->
@@ -293,7 +459,13 @@
   
     <script>
         (function(){
-
+            const sidebar = document.querySelector('.sidebar-root');
+            const buttonNext = document.querySelector('#continue');
+            const apiDiv = document.querySelectorAll('[data-name="SelfAsserted"]');
+            if (apiDiv.length > 0){
+                sidebar.setAttribute("style", "display:block");
+                buttonNext.innerHTML = 'Next <svg class="btn-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.3 0.7L12.1 4.5H0V5.5H12.1L8.3 9.3L9 10L14 5L9 0L8.3 0.7Z" fill="white"/></svg>'
+            }
         })();
     </script>
   </body>
