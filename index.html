@@ -346,6 +346,12 @@
             margin-left: 7px;
         }
 
+        #LinkedInExchange {
+            background-color: white;
+            border: 1px solid #0077b5;
+            padding: calc(0.875rem - 3px) 12px;
+        }
+
         .intro, .helpLink, .sign-up {
             display: none;
         }
@@ -412,13 +418,11 @@
                     </div>
                     
                     <div class="inner">
-                        <h1 class="sign-up">Hello! Let’s start with your personal information.</h1>
-                        <h2 class="sign-up">We’ll use this information to create your ProFound Marketplace profile.</h2>
+                        <h1 class="sign-up">Hello! Let's start with your personal information.</h1>
+                        <h2 class="sign-up">We'll use this information to create your ProFound Marketplace profile.</h2>
     
-                        <!-- form here -->
-                            
+                        <!-- form here -->                            
                         <div id="api"></div>
-    
                         <!-- /form here -->
                     </div>
                 </div>
@@ -437,8 +441,7 @@
                 </p>
               </div>
               <div class="footer-right">
-                <span data-localize="copyright">Copyright</span>
-                © <span id="footer-rights-year">2021</span>
+                <span data-localize="copyright">Copyright</span> © <span id="footer-rights-year">2021</span>
                 <span data-localize="rights">ProFound Marketplace. All rights reserved.</span>
               </div>
             </div>
@@ -453,6 +456,12 @@
             const buttonNext = document.querySelector('#continue');
             const buttonCancel = document.querySelector('#cancel');
             const apiDiv = document.querySelectorAll('[data-name="SelfAsserted"]');
+            const linkedInButton = document.querySelector('#LinkedInExchange');
+
+            if (linkedInButton) {
+                linkedInButton.innerHTML = '<img src="https://pixeluga.github.io/azure-ad-template/linkedin.svg" height="18px" />'
+            }
+
             if (apiDiv.length > 0){
                 sidebar.setAttribute("style", "display:block");
                 signUpHeaders.forEach(el => {
