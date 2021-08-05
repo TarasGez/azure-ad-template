@@ -350,7 +350,11 @@
             background-color: white;
             background-color: #0a66c2;
             border: 1px solid #0a66c2;
-            padding: calc(0.875rem - 8px) 12px;
+            padding: 0 20px;
+            height: 42px;
+        }
+        #LinkedInExchange img{
+            height: 18px; 
         }
 
         .intro, .helpLink, .sign-up {
@@ -460,7 +464,7 @@
             const linkedInButton = document.querySelector('#LinkedInExchange');
 
             if (linkedInButton) {
-                linkedInButton.innerHTML = '<img src="https://pixeluga.github.io/azure-ad-template/linkedin-white.svg" height="31px" />'
+                linkedInButton.innerHTML = '<img src="https://pixeluga.github.io/azure-ad-template/linkedin-white.svg"/>'
             }
 
             if (apiDiv.length > 0){
